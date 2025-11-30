@@ -1,0 +1,15 @@
+enum CampoContratoPlanilla{
+  id,
+  documentocompras,
+  material,
+  tiempocontractualdeprimeranetregadias,
+  tiempocontractualdetcadias,
+  tipotcacontractual,
+  etcontrato,
+  versionetcontrato,
+  tendercode,
+  tiepogarantiameses,
+  estado,
+  persona,
+  fecha,
+}
