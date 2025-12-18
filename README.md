@@ -9,89 +9,89 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
-## 📋 Descripción
+## 📋 Description
 
-**COM_APP** es una aplicación Flutter empresarial para la gestión y control de órdenes de materiales. Permite a los usuarios gestionar contratos, presupuestos, órdenes de compra y realizar seguimiento de inventarios y costos en tiempo real.
+**COM_APP** is an enterprise Flutter application for material order management and control. It enables users to manage contracts, budgets, purchase orders, and track inventory and costs in real-time.
 
-## ✨ Características Principales
+## ✨ Key Features
 
-- 🔐 **Autenticación segura** con Firebase Auth
-- 📊 **Dashboard interactivo** con visualización de datos
-- 📦 **Gestión de órdenes** de compra y materiales
-- 💰 **Control de presupuestos** y costos
-- 📈 **Reportes y análisis** de datos
-- 🔄 **Sincronización en tiempo real** con Supabase
-- 📧 **Sistema de notificaciones** por correo
-- 🌐 **Soporte multiplataforma** (Web, Android)
+- 🔐 **Secure authentication** with Firebase Auth
+- 📊 **Interactive dashboard** with data visualization
+- 📦 **Order management** for purchases and materials
+- 💰 **Budget and cost control**
+- 📈 **Reports and analytics**
+- 🔄 **Real-time synchronization** with Supabase
+- 📧 **Email notification system**
+- 🌐 **Multi-platform support** (Web, Android)
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
-| Tecnología | Uso |
-|------------|-----|
-| **Flutter 3.x** | Framework de desarrollo |
-| **Dart 3.x** | Lenguaje de programación |
-| **Firebase** | Autenticación y hosting |
-| **Supabase** | Base de datos y APIs |
+| Technology | Usage |
+|------------|-------|
+| **Flutter 3.x** | Development framework |
+| **Dart 3.x** | Programming language |
+| **Firebase** | Authentication and hosting |
+| **Supabase** | Database and APIs |
 | **Google Apps Script** | Backend APIs |
-| **BLoC** | Gestión de estado |
+| **BLoC** | State management |
 
-## 📁 Arquitectura del Proyecto
+## 📁 Project Architecture
 
 ```
 lib/
-├── bloc/                 # Estado global con BLoC
-├── budget/               # Módulo de presupuestos
-├── contrato/             # Módulo de contratos
-├── home/                 # Página principal
-├── login/                # Autenticación
-├── resources/            # Recursos compartidos
-│   ├── constants/        # Constantes y configuración
-│   └── env_config.dart   # Variables de entorno
-├── firebase_options.dart # Configuración Firebase
-└── main.dart             # Punto de entrada
+├── bloc/                 # Global state with BLoC
+├── budget/               # Budget module
+├── contrato/             # Contract module
+├── home/                 # Home page
+├── login/                # Authentication
+├── resources/            # Shared resources
+│   ├── constants/        # Constants and configuration
+│   └── env_config.dart   # Environment variables
+├── firebase_options.dart # Firebase configuration
+└── main.dart             # Entry point
 ```
 
-## 🚀 Instalación
+## 🚀 Installation
 
-### Prerrequisitos
+### Prerequisites
 
-- Flutter SDK 3.7.2 o superior
+- Flutter SDK 3.7.2 or higher
 - Dart SDK 3.x
-- Una cuenta de Firebase
-- Una cuenta de Supabase (opcional)
+- A Firebase account
+- A Supabase account (optional)
 - Git
 
-### Pasos de Instalación
+### Installation Steps
 
-1. **Clonar el repositorio**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/jozzer182/COM_APP.git
    cd COM_APP
    ```
 
-2. **Configurar variables de entorno**
+2. **Configure environment variables**
    ```bash
-   # Copiar el archivo de ejemplo
+   # Copy the example file
    cp .env.example .env
    
-   # Editar .env con tus credenciales
-   # Ver sección "Configuración de Variables de Entorno"
+   # Edit .env with your credentials
+   # See "Environment Variables Configuration" section
    ```
 
-3. **Configurar Firebase para Android**
+3. **Configure Firebase for Android**
    ```bash
-   # Copiar el archivo de ejemplo
+   # Copy the example file
    cp android/app/google-services.json.example android/app/google-services.json
    
-   # Reemplazar con tu archivo google-services.json de Firebase Console
+   # Replace with your google-services.json from Firebase Console
    ```
 
-4. **Instalar dependencias**
+4. **Install dependencies**
    ```bash
    flutter pub get
    ```
 
-5. **Ejecutar la aplicación**
+5. **Run the application**
    ```bash
    # Web
    flutter run -d chrome
@@ -100,61 +100,61 @@ lib/
    flutter run -d android
    ```
 
-## ⚙️ Configuración de Variables de Entorno
+## ⚙️ Environment Variables Configuration
 
-Crea un archivo `.env` en la raíz del proyecto basándote en `.env.example`:
+Create a `.env` file in the project root based on `.env.example`:
 
 ### Firebase
 
 ```env
 # Web
-FIREBASE_WEB_API_KEY=tu_api_key
-FIREBASE_WEB_APP_ID=tu_app_id
-FIREBASE_WEB_PROJECT_ID=tu_project_id
+FIREBASE_WEB_API_KEY=your_api_key
+FIREBASE_WEB_APP_ID=your_app_id
+FIREBASE_WEB_PROJECT_ID=your_project_id
 # ... etc
 
 # Android
-FIREBASE_ANDROID_API_KEY=tu_api_key
+FIREBASE_ANDROID_API_KEY=your_api_key
 # ... etc
 ```
 
 ### Google Apps Script
 
-Las APIs utilizan Google Apps Script. Necesitas desplegar tus propios scripts:
+The APIs use Google Apps Script. You need to deploy your own scripts:
 
 ```env
-API_FEM=https://script.google.com/macros/s/TU_SCRIPT_ID/exec
-API_COSTI=https://script.google.com/macros/s/TU_SCRIPT_ID/exec
+API_FEM=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+API_COSTI=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
 # ... etc
 ```
 
 ### Supabase
 
 ```env
-SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_ANON_KEY=tu_anon_key
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your_anon_key
 ```
 
-## 📖 Documentación Adicional
+## 📖 Additional Documentation
 
-Para instrucciones detalladas de configuración, consulta:
-- [docs/SETUP.md](docs/SETUP.md) - Guía completa de configuración
+For detailed configuration instructions, see:
+- [docs/SETUP.md](docs/SETUP.md) - Complete setup guide
 
-## 🤝 Contribuciones
+## 🤝 Contributing
 
-Las contribuciones son bienvenidas. Por favor:
+Contributions are welcome. Please:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto es de uso privado/interno.
+This project is for private/internal use.
 
-## 📬 Contacto
+## 📬 Contact
 
 **José Zarabanda**
 
@@ -165,5 +165,5 @@ Este proyecto es de uso privado/interno.
 ---
 
 <p align="center">
-  Desarrollado con ❤️ usando Flutter
+  Developed with ❤️ using Flutter
 </p>
